@@ -9,7 +9,7 @@ group :development do
   # Use sqlite3 as a development database
   gem 'sqlite3'
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-  gem 'tzinfo-data', platforms: [:mingw, :mswin]
+  # gem 'tzinfo-data', platforms: [:mingw, :mswin]
 end
 
 # production gems
