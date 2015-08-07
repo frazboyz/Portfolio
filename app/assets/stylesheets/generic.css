@@ -34,14 +34,29 @@ a {
 .header > a {
   display: block;
   float: left;
-  margin-top: 3px;
+  width: 100px;
+  margin-top: 7px;
+  padding-left: 48px;
+  font-weight: bold;
+  color: #b6b6b6;
+  line-height: 17px;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.header > a:hover, .header > a:focus {
+  color: #3a83e5;
+}
+.header > a:before {
+  display: block;
+  position: absolute;
+  content: " ";
+  box-sizing: border-box;
+  left: 0;
+  top: 4px;
   height: 40px;
   width: 40px;
-  border-radius: 50px;
-  background: url(/assets/francis.png) no-repeat left;
-  background-size: 40px, 40px;
-  border: 2px solid #3a83e5;
-  text-indent: 10000px;
+  background: url(/assets/francis.png) no-repeat left center;
+  background-size: 40px;
 }
 .header > ul.menu {
   float: right;
