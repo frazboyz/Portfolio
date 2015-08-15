@@ -4,15 +4,16 @@
  */
 /** General styles **/
 body {
-  color: #b6b6b6;
-  border-top: 3px solid #3a83e5;
-  #border-bottom: 3px solid #3a83e5;
-  font-family: 'Source Sans Pro', arial, sans-serif;
+  color: #333333;
+  padding-top: 5px;
+  background: url(/assets/border.jpg) repeat-x top left;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 h1, h2, h3 {
-  color: #3a83e5;
+  color: #333333;
 }
 a {
+  color: #333333;
   text-decoration: none;
 }
 
@@ -20,11 +21,31 @@ a {
   width: 1000px;
   margin: 0 auto;
 }
-.grey {
-  color: #b6b6b6;
+.content {
+  margin-top: 50px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dark {
+  color: #333333;
 }
 .blue {
   color: #3a83e5;
+}
+
+.spacer-sm {
+  height: 25px;
+}
+.spacer-md {
+  height: 50px;
+}
+.spacer-lg {
+  height: 75px;
 }
 
 /** Header styles **/
@@ -34,29 +55,14 @@ a {
 .header > a {
   display: block;
   float: left;
-  width: 100px;
-  margin-top: 7px;
-  padding-left: 48px;
-  font-weight: bold;
-  color: #b6b6b6;
-  line-height: 17px;
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 1.3em;
+  line-height: 0.9em;
   transition: color 0.2s;
 }
-.header > a:hover, .header > a:focus {
-  color: #3a83e5;
-}
-.header > a:before {
+.header > a > span {
   display: block;
-  position: absolute;
-  content: " ";
-  box-sizing: border-box;
-  left: 0;
-  top: 4px;
-  height: 40px;
-  width: 40px;
-  background: url(/assets/francis.png) no-repeat left center;
-  background-size: 40px;
+  font-size: 12px;
 }
 .header > ul.menu {
   float: right;
@@ -69,28 +75,21 @@ a {
 .header > ul.menu > li > a {
   display: block;
   line-height: 50px;
-  color: #b6b6b6;
-  font-weight: bold;
-  text-transform: uppercase;
   padding: 0 10px;
   transition: color 0.2s;
 }
-.header > ul.menu > li > a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 15px;
-  height: 8px;
-  background: url(/assets/menu-arrow.png) no-repeat bottom center;
-  background-size: 16px;
-  transition: background-position 0.2s;
+.header > ul.menu > li:nth-of-type(1) > a:hover, .header > ul.menu > li:nth-of-type(1) > a:focus, .header > ul.menu > li:nth-of-type(1) > a.current {
+  color: #ff9800;
 }
-.header > ul.menu > li > a:hover, .header > ul.menu > li > a:focus, .header > ul.menu > li > a.sel {
-  color: #3a83e5;
+.header > ul.menu > li:nth-of-type(2) > a:hover, .header > ul.menu > li:nth-of-type(2) > a:focus, .header > ul.menu > li:nth-of-type(2) > a.current {
+  color: #f44336;
 }
-.header > ul.menu > li > a:hover:before, .header > ul.menu > li > a:focus:before, .header > ul.menu > li > a.sel:before {
-  background-position: top center;
+.header > ul.menu > li:nth-of-type(3) > a:hover, .header > ul.menu > li:nth-of-type(3) > a:focus, .header > ul.menu > li:nth-of-type(3) > a.current {
+  color: #2196f3;
+}
+.header > ul.menu > li:nth-of-type(4) > a:hover, .header > ul.menu > li:nth-of-type(4) > a:focus, .header > ul.menu > li:nth-of-type(4) > a.current {
+  color: #009688;
+}
+.header > ul.menu > li:nth-of-type(5) > a:hover, .header > ul.menu > li:nth-of-type(5) > a:focus, .header > ul.menu > li:nth-of-type(5) > a.current {
+  color: #ff9800;
 }
