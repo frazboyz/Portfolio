@@ -10,6 +10,7 @@ body {
   font-family: 'Open Sans', arial, sans-serif;
 }
 h1, h2, h3 {
+  font-weight: lighter;
   color: #333333;
 }
 a {
@@ -23,6 +24,7 @@ a {
 }
 .content {
   margin-top: 50px;
+  font-weight: 300;
 }
 
 .center {
@@ -85,11 +87,13 @@ a {
   color: #f44336;
 }
 .header > ul.menu > li:nth-of-type(3) > a:hover, .header > ul.menu > li:nth-of-type(3) > a:focus, .header > ul.menu > li:nth-of-type(3) > a.current {
-  color: #2196f3;
+  color: #009688;
 }
 .header > ul.menu > li:nth-of-type(4) > a:hover, .header > ul.menu > li:nth-of-type(4) > a:focus, .header > ul.menu > li:nth-of-type(4) > a.current {
-  color: #009688;
+  color: #2196f3;
 }
 .header > ul.menu > li:nth-of-type(5) > a:hover, .header > ul.menu > li:nth-of-type(5) > a:focus, .header > ul.menu > li:nth-of-type(5) > a.current {
   color: #ff9800;
 }
+
+/** Content Styles **/

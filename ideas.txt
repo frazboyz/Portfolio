@@ -1,14 +1,21 @@
 Overview {
-
+  About life
+  Featured Skills
+  Featured Projects
+  Featured Hobbies
 }
-Employment {
-
+Projects {
+  RSUpdater
+  RSClient
+  MyREST
+  KNN Example
 }
 Skills {
-
+  java etc
 }
 Education {
-  
+  Diploma from comuter power
+  Web architecture cert from uni of mexico
 }
 Hobbies {
   Lots of beautiful pictures here

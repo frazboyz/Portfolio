@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
 
   end
 
+  private
+
+  def logged_in
+    session[:user_id] != nil
+  end
+
 end
