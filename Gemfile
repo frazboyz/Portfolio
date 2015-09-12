@@ -16,9 +16,6 @@ end
 group :production do
   # Postgresql as the production database
   gem 'pg'
-
-  # Open Shift may require these gems
-  gem 'rake'
 end
 
 # Use jquery as the JavaScript library
