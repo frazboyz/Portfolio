@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 
 # Open Shift may require these gems
+gem 'rake', '~> 0.9.6'
 
 # Development gems
 group :development do
