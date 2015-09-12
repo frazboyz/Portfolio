@@ -4,8 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
-# Open Shift may require this gem
-gem 'rake', '~> 0.9.6'
+# Open Shift may require these gems
 
 # Development gems
 group :development do
@@ -19,9 +18,6 @@ end
 group :production do
   gem 'pg'
 end
-
-# Use carrierwave for the product image handling
-# gem 'carrierwave'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
