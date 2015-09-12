@@ -4,9 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
-# Open Shift may require these gems
-gem 'rake', '~> 0.9.6'
-
 # Development gems
 group :development do
   # Use sqlite3 as a development database
@@ -17,7 +14,11 @@ end
 
 # production gems
 group :production do
+  # Postgresql as the production database
   gem 'pg'
+
+  # Open Shift may require these gems
+  gem 'rake', '~> 0.9.6'
 end
 
 # Use jquery as the JavaScript library
