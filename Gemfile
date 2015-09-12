@@ -18,7 +18,7 @@ group :production do
   gem 'pg'
 
   # Open Shift may require these gems
-  gem 'rake', '~> 0.9.6'
+  gem 'rake'
 end
 
 # Use jquery as the JavaScript library

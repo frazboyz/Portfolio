@@ -106,7 +106,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.2.1)
-  rake (~> 0.9.6)
+  rake
   sqlite3
 
 BUNDLED WITH
