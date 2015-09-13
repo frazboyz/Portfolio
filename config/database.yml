@@ -25,10 +25,10 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: <%=ENV['OPENSHIFT_APP_NAME']%>
-  username: <%=ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD']%>
-  host:     <%=ENV['OPENSHIFT_POSTGRESQL_DB_HOST']%>
-  port:     <%=ENV['OPENSHIFT_POSTGRESQL_DB_PORT']%>
+  database: <%= ENV["POSTGRESQL_ADDON_DB"] %>
+  username: <%= ENV["POSTGRESQL_ADDON_USER"] %>
+  password: <%= ENV["POSTGRESQL_ADDON_PASSWORD"] %>
+  host:     <%= ENV["POSTGRESQL_ADDON_HOST"] %>
+  port:     <%= ENV["POSTGRESQL_ADDON_PORT"] %>
   min_messages: ERROR
   reconnect: false
