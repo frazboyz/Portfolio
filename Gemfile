@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.1' # Specify the ruby on rails version
+gem 'jquery-rails' # Use jquery as the JavaScript library
+gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
 
 # Development gems
 group :development do
@@ -11,14 +13,9 @@ group :development do
   # gem 'tzinfo-data', platforms: [:mingw, :mswin]
 end
 
-# production gems
+# Production gems
 group :production do
-  # Postgresql as the production database
-  gem 'pg'
+  gem 'pg' # Postgresql as the production database
+  gem 'uglifier' # Use uglifier for javascript compression
+  gem 'cssminify' # Use css minifier for css compression
 end
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-# Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
