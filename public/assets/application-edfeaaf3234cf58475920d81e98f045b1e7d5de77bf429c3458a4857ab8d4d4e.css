@@ -1,0 +1,23 @@
+h1.huge {
+  font-size: 4.5em;
+  font-weight: 300;
+}
+h1.huge > span {
+  display: block;
+  font-size: 16px;
+  margin-top: -10px;
+}
+p.padded {
+  padding: 0 100px;
+}
+.young-background {
+  margin: 40px 0;
+  padding: 40px;
+  background: url(/images/background.jpg) center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.young-background h1 {
+  color: #ffffff;
+  text-align: center;
+}
