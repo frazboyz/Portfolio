@@ -29,7 +29,7 @@ Rails.application.configure do
   # config.assets.css_compressor = CSSminify.new
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Precompile all assets
   config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
