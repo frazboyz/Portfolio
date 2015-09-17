@@ -10,3 +10,14 @@ h1.huge > span {
 p.padded {
   padding: 0 100px;
 }
+.young-background {
+  margin: 40px 0;
+  padding: 40px;
+  background: url(/assets/background.jpg) center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.young-background h1 {
+  color: #ffffff;
+  text-align: center;
+}

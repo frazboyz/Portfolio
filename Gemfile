@@ -16,6 +16,4 @@ end
 # Production gems
 group :production do
   gem 'pg' # Postgresql as the production database
-  gem 'uglifier' # Use uglifier for javascript compression
-  gem 'cssminify' # Use css minifier for css compression
 end
