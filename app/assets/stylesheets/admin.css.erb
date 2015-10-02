@@ -1,0 +1,41 @@
+/*
+ *= require fonts
+ *= require reset
+ *= require grid
+ */
+/** General styles **/
+body {
+  color: #333333;
+  font-family: 'Open Sans', arial, sans-serif;
+}
+h1, h2, h3 {
+  font-weight: lighter;
+  color: #333333;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.admin-panel {
+  padding: 5px 0;
+  margin-top: 200px;
+  background:  url(<%= image_url('border.jpg') %>) repeat top left;
+}
+.admin-panel > .content {
+  padding: 20px 5px;
+  background: #ffffff;
+}
+.admin-panel h2.title {
+  text-align: center;
+}
+.admin-panel h2.title > span {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}

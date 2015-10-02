@@ -1,10 +1,21 @@
 class AccessController < ApplicationController
 
+  layout "admin"
+
   def login
+    if logged_in
+      redirect_to :controller => :application, :action => :index
+    end
+  end
+
+  def process_login
     user = User.find_by_username(params[:username]);
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to :
+      redirect_to :controller => :application
+    else
+      flash[:error] = "Failed to login, please try again."
+      render :action => :login
     end
   end
 

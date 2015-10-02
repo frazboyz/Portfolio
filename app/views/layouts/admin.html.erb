@@ -2,17 +2,19 @@
 <html>
 <head>
   <title>CV</title>
-  <%= stylesheet_link_tag 'generic' %>
-  <%= stylesheet_link_tag params[:controller] %>
+  <%= stylesheet_link_tag 'admin' %>
+  <%= javascript_include_tag 'admin' %>
   <%= yield :headers %>
-  <%= render :partial => "layouts/partials/preload" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a class="me" href="#">Francis Malloch-Boe<span>Admin Area!</span></a>
+  <div class="container">
+    <div class="admin-panel">
+      <div class="content">
+        <h2 class="title">Admin Area<span>Francis Malloch-Boe</span></h2>
+        <%= yield %>
+      </div>
     </div>
-  </header>
+  </div>
 </body>
 </html>
