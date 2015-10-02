@@ -1,0 +1,17 @@
+.grid:before, .grid:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+.grid > .half {
+  width: 50%;
+  float: left;
+}
+.grid > .third {
+  width: 33.3%;
+  float: left;
+}
+.grid > .quater {
+  width: 25%;
+  float: left;
+}

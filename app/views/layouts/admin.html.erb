@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CV</title>
+  <%= stylesheet_link_tag 'generic' %>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= yield :headers %>
+  <%= render :partial => "layouts/partials/preload" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="me" href="#">Francis Malloch-Boe<span>Admin Area!</span></a>
+    </div>
+  </header>
+</body>
+</html>

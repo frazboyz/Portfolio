@@ -1,12 +1,11 @@
 /*
  *= require fonts
  *= require reset
+ *= require grid
  */
 /** General styles **/
 body {
   color: #333333;
-  padding-top: 5px;
-  background:  url(<%= image_url('border.jpg') %>) repeat-x top left;
   font-family: 'Open Sans', arial, sans-serif;
 }
 h1, h2, h3 {
@@ -23,8 +22,14 @@ a {
   margin: 0 auto;
 }
 .content {
-  margin-top: 50px;
+  padding: 50px 0;
   font-weight: 300;
+  min-height: calc(100vh - 210px);
+}
+.content:after {
+  display: block;
+  clear: both;
+  content: " ";
 }
 
 .center {
@@ -53,6 +58,8 @@ a {
 /** Header styles **/
 header {
   height: 50px;
+  padding-top: 5px;
+  background:  url(<%= image_url('border.jpg') %>) repeat-x top left;
 }
 header a.me {
   display: block;
@@ -96,4 +103,32 @@ header ul.menu > li:nth-of-type(4) > a:hover, header ul.menu > li:nth-of-type(4)
 }
 header ul.menu > li:nth-of-type(5) > a:hover, header ul.menu > li:nth-of-type(5) > a:focus, header ul.menu > li:nth-of-type(5) > a.current {
   color: #ff9800;
+}
+
+/** Footer Styles **/
+footer {
+  height: 50px;
+  padding-bottom: 5px;
+  text-align: center;
+  background:  url(<%= image_url('border.jpg') %>) repeat-x bottom left;
+}
+footer a {
+  display: inline-block;
+  color: #6c6c6c;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 5px;
+  transition: color 0.2s;
+}
+footer a:hover, footer a:focus {
+  color: #333333;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+footer ul > li {
+  display: inline-block;
+  margin: 0;
 }

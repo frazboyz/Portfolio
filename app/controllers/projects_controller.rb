@@ -1,4 +1,9 @@
 class ProjectsController < ApplicationController
+
+  layout "application", :only => [:index, :show]
+  layout "admin", :only => [:new, :create, :delete, :destroy]
+  before_action :logged_in, :only => [:new, :create, :delete, :destroy]
+
   def index
   end
 
@@ -16,4 +21,5 @@ class ProjectsController < ApplicationController
 
   def destroy
   end
+
 end

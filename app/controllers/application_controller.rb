@@ -4,13 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-
   end
 
   private
 
   def logged_in
     session[:user_id] != nil
+  end
+
+  def get_user
+    user.find_by_id(session[:user_id])
   end
 
 end
