@@ -12,6 +12,13 @@
     <div class="admin-panel">
       <div class="content">
         <h2 class="title">Admin Area<span>Francis Malloch-Boe</span></h2>
+        <% if params[:action] != "login" && params[:action] != "process_login" %>
+          <ul class="menu">
+            <li><a href="<%= url_for :controller => :admin, :action => :blogs %>">Blog</a></li>
+            <li><a href="<%= url_for :controller => :admin, :action => :projects %>">Projects</a></li>
+            <li><a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a></li>
+          </ul>
+        <% end %>
         <%= yield %>
       </div>
     </div>

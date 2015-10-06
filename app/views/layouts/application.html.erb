@@ -15,19 +15,19 @@
 
       <ul class="menu">
         <li>
-          <a class="<%= params[:controller] == 'application' ? 'current' : '' %>" href="<%= url_for :controller => 'application' %>">Overview</a>
+          <a class="<%= params[:controller] == 'application' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
         </li>
         <li>
-          <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => 'skills' %>">Skills</a>
+          <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
         </li>
         <li>
-          <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => 'projects' %>">Projects</a>
+          <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
         </li>
         <li>
           <a class="<%= params[:controller] == 'hobbies' ? 'current' : '' %>" href="/">Hobbies</a>
         </li>
         <li>
-          <a class="<%= params[:controller] == 'blog' ? 'current' : '' %>" href="/">Blog</a>
+          <a class="<%= params[:controller] == 'blog' ? 'current' : '' %>" href="<%= url_for :controller => :blog %>">Blog</a>
         </li>
       </ul>
     </div>
@@ -59,7 +59,7 @@
               <a href="#">Blog</a>
             </li>
             <li>
-              <a href="<%= url_for :controller => :access, :action => :login %>">Admin</a>
+              <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
             </li>
           </ul>
         </div>

@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
     user.find_by_id(session[:user_id])
   end
 
+  def require_authentication
+    if !logged_in
+      redirect_to :controller => :admin, :action => :login
+    end
+  end
+
 end

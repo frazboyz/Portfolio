@@ -32,10 +32,74 @@ a {
   background: #ffffff;
 }
 .admin-panel h2.title {
+  margin: 0;
   text-align: center;
 }
 .admin-panel h2.title > span {
   display: block;
   font-size: 12px;
   font-weight: bold;
+}
+
+/** Menu Styles **/
+.admin-panel ul.menu {
+  padding: 0;
+  margin: 10px 0 25px 0;
+  text-align: center;
+}
+.admin-panel ul.menu > li {
+  display: inline-block;
+}
+.admin-panel ul.menu > li > a {
+  display: block;
+  padding: 5px;
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.admin-panel ul.menu > li > a:hover, .admin-panel ul.menu > li > a:focus {
+  border-color: #333333;
+}
+
+/** Login Form **/
+.login-form {
+  margin-top: 20px;
+}
+.login-form input, .login-form label {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+.login-form input {
+  margin-bottom: 15px;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+  background: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  padding: 4px;
+}
+.login-form .error {
+  color: red;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/** Post Styles **/
+table, thead, tbody, tr {
+  width: 100%;
+  text-align: left;
+  font-weight: normal;
+}
+thead {
+  background-color: #dddddd;
+}
+table tr > th:nth-child(2), table tr > th:nth-child(3) {
+  text-align: center;
+}
+table tr > th:nth-child(4) {
+  text-align: right;
 }
