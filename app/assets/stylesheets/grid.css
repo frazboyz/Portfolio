@@ -3,15 +3,18 @@
   content: " ";
   clear: both;
 }
+.grid > .half, .grid > .third, .grid > .quarter {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 .grid > .half {
   width: 50%;
-  float: left;
 }
 .grid > .third {
   width: 33.3%;
-  float: left;
 }
-.grid > .quater {
+.grid > .quarter {
   width: 25%;
-  float: left;
 }

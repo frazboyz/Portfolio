@@ -5,70 +5,73 @@
   <%= stylesheet_link_tag 'generic' %>
   <%= stylesheet_link_tag params[:controller] %>
   <%= yield :headers %>
-  <%= render :partial => "layouts/partials/preload" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a class="me" href="#">Francis Malloch-Boe<span>Yes, I'm a Software Engineer</span></a>
+<header>
+  <div class="container">
+    <a class="me" href="#">Francis Malloch-Boe<span>Yes, I'm a Software Engineer</span></a>
 
-      <ul class="menu">
-        <li>
-          <a class="<%= params[:controller] == 'application' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
-        </li>
-        <li>
-          <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
-        </li>
-        <li>
-          <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
-        </li>
-        <li>
-          <a class="<%= params[:controller] == 'hobbies' ? 'current' : '' %>" href="/">Hobbies</a>
-        </li>
-        <li>
-          <a class="<%= params[:controller] == 'blog' ? 'current' : '' %>" href="<%= url_for :controller => :blog %>">Blog</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="content">
-    <%= yield %>
+    <ul class="menu">
+      <li>
+        <a class="<%= params[:controller] == 'application' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
+      </li>
+      <li>
+        <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
+      </li>
+      <li>
+        <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
+      </li>
+      <li>
+        <a class="<%= params[:controller] == 'hobbies' ? 'current' : '' %>" href="/">Hobbies</a>
+      </li>
+      <li>
+        <a class="<%= params[:controller] == 'blog' ? 'current' : '' %>" href="<%= url_for :controller => :blog %>">Blog</a>
+      </li>
+    </ul>
   </div>
-  <footer>
-    <div class="container">
-      <div class="grid">
-        <div class="quater">
-          <a href="#">Francis Malloch-Boe</a>
-        </div>
-        <div class="half">
-          <ul class="menu">
-            <li>
-              <a href="#">Overview</a>
-            </li>
-            <li>
-              <a href="#">Skills</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Hobbies</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
-            </li>
-          </ul>
-        </div>
-        <div class="quater">
-          <a href="">Github</a>
-          <a href="">Linkdin</a>
-        </div>
+</header>
+<div class="content">
+  <%= yield %>
+</div>
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div class="quarter">
+        <a href="#">Francis Malloch-Boe</a>
+      </div>
+      <div class="half">
+        <ul class="menu">
+          <li>
+            <a href="#">Overview</a>
+          </li>
+          <li>
+            <a href="#">Skills</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Hobbies</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <% if logged_in %>
+                <a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
+            <% else %>
+                <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="quarter">
+        <a href="">Github</a>
+        <a href="">Linkdin</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,7 +1,5 @@
 class ProjectsController < ApplicationController
 
-  layout "application", :only => [:index, :show]
-  layout "admin", :only => [:new, :create, :delete, :destroy]
   before_action :require_authentication, :only => [:new, :create, :delete, :destroy]
 
   def index

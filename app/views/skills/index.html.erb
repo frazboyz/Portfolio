@@ -1,2 +1,16 @@
-<h1>Skills#index</h1>
-<p>Find me in app/views/skills/index.html.erb</p>
+<div class="container">
+  <h1>Skills</h1>
+  <% if logged_in %>
+    <a class="new-skill button" href="<%= url_for :controller => :skills, :action => :new %>">New Skill</a>
+  <% end %>
+  <br class="spacer-sm"/>
+  <div class="skills grid">
+    <% @skills.each do |skill| %>
+      <div class="third" style="border-color:<%= skill.color %>">
+        <h3><%= skill.name %></h3>
+        <p><%= skill.summary %></p>
+        <a class="button" href="<%= url_for :controller => :skills, :action => :show, :id => skill.id %>">More Info</a>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <%= stylesheet_link_tag "access" %>
 <% end %>
 <div class="login-form">
-  <%= form_for :user, :url => {:action => :process_login} do |f| %>
+  <%= form_for :user, :url => {:action => :authenticate} do |f| %>
 
     <label for="username">Username</label>
     <input id="username" type="text" name="username"/>

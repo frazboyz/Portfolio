@@ -2,3 +2,23 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+a.new-skill {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.skills > div.third {
+    text-align: center;
+    margin: 10px;
+    height: 300px;
+    width: 30%;
+    width: calc(33.3% - 20px);
+    border: 5px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.skills > div.third:nth-child(3n+1) {
+    margin-left: 0;
+    margin-right: 20px;
+}

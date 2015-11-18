@@ -16,12 +16,19 @@ a {
   color: #333333;
   text-decoration: none;
 }
+p {
+  margin-bottom: 20px;
+}
+p.errors {
+  color: #F44336;
+}
 
 .container {
   width: 1000px;
   margin: 0 auto;
 }
 .content {
+  position: relative;
   padding: 50px 0;
   font-weight: 300;
   min-height: calc(100vh - 210px);
@@ -30,6 +37,27 @@ a {
   display: block;
   clear: both;
   content: " ";
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 15px;
+  color: #333333;
+  cursor: pointer;
+  border: none;
+  text-decoration: none !important;
+  background-color: #E6E6E6;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.button:hover, .button:focus {
+  background-color: #dcdcdc;
+}
+.button:active {
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+  -moz-box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
 }
 
 .center {
@@ -131,4 +159,39 @@ footer ul {
 footer ul > li {
   display: inline-block;
   margin: 0;
+}
+footer .grid > .quarter:first-child {
+  text-align: left;
+}
+footer .grid > .quarter:last-child {
+  text-align: right;
+}
+
+/** Form Styles **/
+form {
+  display: block;
+}
+form.small {
+  width: 300px;
+}
+form.medium {
+  width: 600px;
+}
+form.large {
+  width: 100%;
+}
+form * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;;
+}
+form input, form textarea {
+  margin-bottom:10px;
+}
+form input[type=number] {
+  display: block;
+}
+form label, form textarea, form input[type=text], form input[type=password] {
+  display: block;
+  width: 100%;
 }
