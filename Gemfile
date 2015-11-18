@@ -15,5 +15,6 @@ end
 
 # Production gems
 group :production do
+  gem 'puma'
   gem 'pg' # Postgresql as the production database
 end
