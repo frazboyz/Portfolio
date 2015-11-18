@@ -79,6 +79,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.2.1)
       actionpack (= 4.2.1)
       activesupport (= 4.2.1)
@@ -96,6 +98,9 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    viaduct_rails_helpers (1.0.0)
+      rails_serve_static_assets
+      rails_stdout_logging
 
 PLATFORMS
   ruby
@@ -105,6 +110,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.1)
   sqlite3
+  viaduct_rails_helpers
 
 BUNDLED WITH
    1.10.6
