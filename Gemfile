@@ -3,7 +3,6 @@ ruby '2.2.2'
 
 gem 'rails', '4.2.1' # Specify the ruby on rails version
 gem 'jquery-rails' # Use jquery as the JavaScript library
-gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
 
 # Development gems
 group :development do
@@ -15,6 +14,7 @@ end
 
 # Production gems
 group :production do
-  gem 'puma'
+  gem 'viaduct_rails_helpers' # Assists viaduct in serving assets
+  gem 'puma' # Use puma as the production rails web server
   gem 'pg' # Postgresql as the production database
 end
