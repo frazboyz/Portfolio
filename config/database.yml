@@ -25,10 +25,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: <%= ENV["POSTGRESQL_ADDON_DB"] %>
-  username: <%= ENV["POSTGRESQL_ADDON_USER"] %>
-  password: <%= ENV["POSTGRESQL_ADDON_PASSWORD"] %>
-  host:     <%= ENV["POSTGRESQL_ADDON_HOST"] %>
-  port:     <%= ENV["POSTGRESQL_ADDON_PORT"] %>
-  min_messages: ERROR
-  reconnect: false
+  database: portfolio_production
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
