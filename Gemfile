@@ -14,7 +14,5 @@ end
 
 # Production gems
 group :production do
-  gem 'viaduct_rails_helpers' # Assists viaduct in serving assets
-  gem 'puma' # Use puma as the production rails web server
   gem 'pg' # Postgresql as the production database
 end
