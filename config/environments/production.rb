@@ -85,12 +85,4 @@ Rails.application.configure do
   #  ActiveRecord::Migrator.migrate(Rails.root.join("db/migrate"))
   #end
 
-  # Add a user to the database
-  #user = User.find_by_username('admin')
-  #if !user
-  #  user = User.new(:username => 'admin')
-  #  user.save
-  #  puts 'Created the default admin user'
-  #end
-
 end
