@@ -81,9 +81,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Migrate database
-  config.after_initialize do
-    ActiveRecord::Migrator.migrate(Rails.root.join("db/migrate"))
-  end
+  #config.after_initialize do
+  #  ActiveRecord::Migrator.migrate(Rails.root.join("db/migrate"))
+  #end
 
   # Add a user to the database
   user = User.find_by_username('admin')
