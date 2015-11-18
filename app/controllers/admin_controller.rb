@@ -20,7 +20,7 @@ class AdminController < ApplicationController
 
   def authenticate
     user = User.find_by_username(params[:username]);
-    if user && user.authenticate(params[:password])
+    if user && params[:password] === ENV["ADMIN_PASSWORD"]
       flash[:error] = nil
       session[:user_id] = user.id
       redirect_to :controller => :application, :action => :index

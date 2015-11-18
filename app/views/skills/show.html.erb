@@ -1,5 +1,14 @@
 <div class="container">
   <h1><%= @skill.name %></h1>
+  <% if logged_in %>
+      <a class="edit-skill button" href="<%= url_for :controller => :skills, :action => :edit, :id => @skill.id %>">
+        Edit Skill
+      </a>
+      <a class="delete-skill button" href="<%= url_for :controller => :skills, :action => :delete, :id => @skill.id %>">
+        Delete Skill
+      </a>
+  <% end %>
   <br class="spacer-sm"/>
+
   <p><%= raw(@skill.content) %></p>
 </div>

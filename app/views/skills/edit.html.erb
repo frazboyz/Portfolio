@@ -1,5 +1,5 @@
 <div class='container'>
-  <h1>New Skill</h1>
+  <h1>Edit <%= @skill.name %> Skill</h1>
   <br class='spacer-sm'/>
   <% if @errors %>
       <p class="errors">
@@ -8,7 +8,7 @@
         <% end %>
       </p>
   <% end %>
-  <%= form_for :skill, :url => {:action => :create}, :html => {:class => 'medium'} do |skill_form| %>
+  <%= form_for :skill, :method => 'put', :url => {:action => :update}, :html => {class: 'medium'} do |skill_form| %>
       <%= skill_form.label(:name, 'Name') %>
       <%= skill_form.text_field(:name) %>
       <%= skill_form.label(:color, 'Color') %>
@@ -19,6 +19,8 @@
       <%= skill_form.text_area(:content) %>
       <%= skill_form.label(:knowledge, 'Knowledge') %>
       <%= skill_form.number_field(:knowledge) %>
-      <%= skill_form.submit('Create Skill', :class => 'button') %>
+      <%= skill_form.check_box(:visible) %>
+      <%= skill_form.label(:visible, "Publically visible") %>
+      <%= skill_form.submit('Update Skill', :class => 'button') %>
   <% end %>
 </div>

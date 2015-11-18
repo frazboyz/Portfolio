@@ -1,2 +1,8 @@
-<h1>Skills#delete</h1>
-<p>Find me in app/views/skills/delete.html.erb</p>
+<div class="container">
+  <h1>Delete <%= @skill.name %> Skill</h1>
+  <br class="spacer-sm"/>
+  <%= form_for :skill, :url => {:action => :destroy, :id => @skill.id}, :method => 'DELETE' do |skill_form| %>
+      <p>Are you sure you want to delete this skill?</p>
+      <%= skill_form.submit('Delete Skill', :class => 'button') %>
+  <% end %>
+</div>

@@ -1,16 +1,36 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'skills' %>
+<% end %>
 <div class="container">
-  <h1>Skills</h1>
+  <h1 class="center">Skills</h1>
   <% if logged_in %>
-    <a class="new-skill button" href="<%= url_for :controller => :skills, :action => :new %>">New Skill</a>
+      <a class="new-skill button" href="<%= url_for :controller => :skills, :action => :new %>">
+        New Skill
+      </a>
   <% end %>
+  <br class="spacer-sm"/>
+  <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Curabitur massa purus, congue condimentum risus in, rutrum
+    sodales est. Morbi non est varius metus dapibus ullamcorper.
+    Vestibulum massa orci, dictum sit amet nulla non,
+    fringilla rutrum nulla. Vestibulum gravida libero at mi auctor,
+    eu auctor sapien dictum.
+  </p>
   <br class="spacer-sm"/>
   <div class="skills grid">
     <% @skills.each do |skill| %>
-      <div class="third" style="border-color:<%= skill.color %>">
-        <h3><%= skill.name %></h3>
-        <p><%= skill.summary %></p>
-        <a class="button" href="<%= url_for :controller => :skills, :action => :show, :id => skill.id %>">More Info</a>
-      </div>
+        <div class="third" style="border-color:<%= skill.color %>">
+          <h3><%= skill.name %></h3>
+
+          <p><%= skill.summary %></p>
+
+          <h2><%= skill.knowledge %>/100</h2>
+          <br class="spacer-sm"/>
+          <a class="button" href="<%= url_for :controller => :skills, :action => :show, :id => skill.id %>">More
+            Info
+          </a>
+        </div>
     <% end %>
   </div>
 </div>
