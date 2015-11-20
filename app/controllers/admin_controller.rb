@@ -1,11 +1,6 @@
 class AdminController < ApplicationController
 
   layout "admin"
-  before_action :require_authentication, :only => [:index, :projects, :blogs]
-
-  def index
-    redirect_to :action => :login
-  end
 
   def login
     if logged_in

@@ -13,7 +13,7 @@ class SkillsController < ApplicationController
     @skills = logged_in ? Skill.all : Skill.where(:visible => true)
   end
 
-  # Shows one skill in-depth.
+  # Shows the contents of a skill.
   # GET http://francismb.com/skills/show?id=?
   def show
     @skill = logged_in ? Skill.find(params[:id]) : Skill.where(:id => params[:id]).where(:visible => true).first
@@ -25,7 +25,7 @@ class SkillsController < ApplicationController
   def new
   end
 
-  # Processes the form sent from the action 'new' and
+  # Processes the form sent from the action #new and
   # creates a new skill if the information is valid.
   # Requires authentication.
   # POST http://francismb.com/skills/create
@@ -46,7 +46,7 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
   end
 
-  # Processes the form sent from the action 'edit' and
+  # Processes the form sent from the action #edit and
   # updates the skill if the information is valid.
   # Requires authentication.
   # PUT http://francismb.com/skills/update
@@ -67,7 +67,7 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
   end
 
-  # Deletes a skill with the id supplied
+  # Deletes a persisted skill from the database.
   # Requires authentication.
   # DELETE http://francismb.com/skills/id=?
   def destroy

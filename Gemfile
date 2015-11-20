@@ -3,6 +3,7 @@ ruby '2.2.2'
 
 gem 'rails', '4.2.1' # Specify the ruby on rails version
 gem 'jquery-rails' # Use jquery as the JavaScript library
+gem 'carrierwave'
 
 # Development gems
 group :development do
