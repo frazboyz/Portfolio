@@ -1,7 +1,4 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+/* Edit/Delete/New button styles */
 a.new-skill, a.edit-skill, a.delete-skill {
     position: absolute;
     right: 0;
@@ -10,13 +7,18 @@ a.new-skill, a.edit-skill, a.delete-skill {
 a.edit-skill {
     right: 120px;
 }
+
+/* Skill index styles */
 .skills > div.third {
     text-align: center;
     margin: 10px;
     padding: 20px;
     width: 30%;
     width: calc(33.3% - 20px);
-    border: 5px solid transparent;
+    #border: 5px solid transparent;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

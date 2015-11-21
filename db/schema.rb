@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120232706) do
+ActiveRecord::Schema.define(version: 20151120235343) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 20151120232706) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.text   "summary"
-    t.text   "content"
-    t.string "image"
+    t.string  "name"
+    t.text    "summary"
+    t.text    "content"
+    t.string  "image"
+    t.boolean "visible"
+    t.string  "github_link"
   end
 
   create_table "skills", force: :cascade do |t|

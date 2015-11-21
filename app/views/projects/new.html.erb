@@ -1,2 +1,24 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<div class='container'>
+  <h1>New Project</h1>
+  <br class='spacer-sm'/>
+  <% if @errors %>
+      <p class="errors">
+        <% @errors.full_messages.each do |error| %>
+            <%= error %><br/>
+        <% end %>
+      </p>
+  <% end %>
+  <%= form_for :project, :url => {:action => :create}, :html => {:class => 'medium'} do |project_form| %>
+      <%= project_form.label(:name, 'Name') %>
+      <%= project_form.text_field(:name) %>
+      <%= project_form.label(:name, 'Github Link') %>
+      <%= project_form.text_field(:github_link) %>
+      <%= project_form.label(:summary, 'Summary') %>
+      <%= project_form.text_area(:summary) %>
+      <%= project_form.label(:content, 'Content') %>
+      <%= project_form.text_area(:content) %>
+      <%= project_form.label(:image, 'Image') %>
+      <%= project_form.file_field :image %>
+      <%= project_form.submit('Create Project', :class => 'button') %>
+  <% end %>
+</div>

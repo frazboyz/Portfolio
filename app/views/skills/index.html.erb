@@ -5,7 +5,7 @@
 <div class="container">
   <h1 class="center">Skills</h1>
   <% if logged_in %>
-      <a class="new-skill button" href="<%= url_for :controller => :skills, :action => :new %>">
+      <a class="new-skill button" href="<%= url_for :action => :new %>">
         New Skill
       </a>
   <% end %>
@@ -20,14 +20,14 @@
   <br class="spacer-sm"/>
   <div class="skills grid">
     <% @skills.each do |skill| %>
-        <div class="third" style="border-color:<%= skill.color %>">
-          <h3><%= skill.name %></h3>
+        <div class="third">
+          <h2 style="color: <%= skill.color %>"><%= skill.name %></h2>
 
           <p><%= skill.summary %></p>
 
           <h2><%= skill.knowledge %>/100</h2>
           <br class="spacer-sm"/>
-          <a class="button" href="<%= url_for :controller => :skills, :action => :show, :id => skill.id %>">More
+          <a class="button" href="<%= url_for :action => :show, :id => skill.id %>">More
             Info
           </a>
         </div>

@@ -1,2 +1,24 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="container">
+  <h1 class="center">Projects</h1>
+  <% if logged_in %>
+      <a class="new-project button" href="<%= url_for :action => :new %>">
+        New Project
+      </a>
+  <% end %>
+  <br class="spacer-sm"/>
+  <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Curabitur massa purus, congue condimentum risus in, rutrum
+    sodales est. Morbi non est varius metus dapibus ullamcorper.
+    Vestibulum massa orci, dictum sit amet nulla non,
+    fringilla rutrum nulla. Vestibulum gravida libero at mi auctor,
+    eu auctor sapien dictum.
+  </p>
+  <br class="spacer-sm"/>
+  <div class="projects">
+    <% @projects.each do |project| %>
+      <div class="skill">
+
+      </div>
+    <% end %>
+  </div>
+</div>

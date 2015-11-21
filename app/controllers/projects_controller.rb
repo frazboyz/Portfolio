@@ -78,4 +78,10 @@ class ProjectsController < ApplicationController
     redirect_to :action => :index
   end
 
+  private
+
+  def project_params
+    params.require(:project).permit(:name, :github_link, :summary, :content, :image)
+  end
+
 end
