@@ -81,7 +81,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :github_link, :summary, :content, :image)
+    params.require(:project).permit(:name, :github_link, :summary, :content, :image, :visible)
   end
 
 end
