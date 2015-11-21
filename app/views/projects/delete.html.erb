@@ -1,2 +1,8 @@
-<h1>Projects#delete</h1>
-<p>Find me in app/views/projects/delete.html.erb</p>
+<div class="container">
+  <h1>Delete <%= @project.name %> Project</h1>
+  <br class="spacer-sm"/>
+  <%= form_for :project, :url => {:action => :destroy, :id => @project.id}, :method => 'DELETE' do |project_form| %>
+      <p>Are you sure you want to delete this project?</p>
+      <%= project_form.submit('Delete Project', :class => 'button') %>
+  <% end %>
+</div>

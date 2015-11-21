@@ -1,3 +1,7 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'projects' %>
+<% end %>
 <div class="container">
   <h1 class="center">Projects</h1>
   <% if logged_in %>
@@ -16,9 +20,35 @@
   <br class="spacer-sm"/>
   <div class="projects">
     <% @projects.each do |project| %>
-      <div class="skill">
-
-      </div>
+      <section class="project">
+        <% if @projects.index(project) % 2 === 0 %>
+            <div class="image">
+              <img src="<%= project.image %>"/>
+            </div>
+            <div class="summary">
+              <div class="position">
+                <h2><%= project.name %></h2>
+                <p><%= project.summary %></p>
+                <a class="button" href="<%= url_for :action => :show, :id => project.id %>">
+                  More Info
+                </a>
+              </div>
+            </div>
+        <% else %>
+            <div class="summary">
+              <div class="position">
+                <h2><%= project.name %></h2>
+                <p><%= project.summary %></p>
+                <a class="button" href="<%= url_for :action => :show, :id => project.id %>">
+                  More Info
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="<%= project.image %>"/>
+            </div>
+        <% end %>
+      </section>
     <% end %>
   </div>
 </div>

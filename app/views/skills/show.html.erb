@@ -1,4 +1,4 @@
-<div class="container">
+<article class="container">
   <h1><%= @skill.name %></h1>
   <% if logged_in %>
       <a class="edit-skill button" href="<%= url_for :action => :edit, :id => @skill.id %>">
@@ -9,6 +9,5 @@
       </a>
   <% end %>
   <br class="spacer-sm"/>
-
   <p><%= raw(@skill.content) %></p>
-</div>
+</article>

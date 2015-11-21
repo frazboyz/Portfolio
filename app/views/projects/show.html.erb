@@ -1,2 +1,15 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<article class="container">
+  <h1><%= @project.name %></h1>
+  <% if logged_in %>
+      <a class="edit-project button" href="<%= url_for :action => :edit, :id => @project.id %>">
+        Edit Project
+      </a>
+      <a class="delete-project button" href="<%= url_for :action => :delete, :id => @project.id %>">
+        Delete Project
+      </a>
+  <% end %>
+  <br class="spacer-sm"/>
+
+  <p><%= raw(@project.content) %></p>
+  <img src="<%= @project.image %>"/>
+</article>

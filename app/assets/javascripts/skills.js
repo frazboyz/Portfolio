@@ -6,7 +6,7 @@ $(window).load(function() {
      * The skills collection.
      * @type {*|jQuery|HTMLElement}
      */
-    var skills = $('.skills > div');
+    var skills = $('.skills > section');
 
     /**
      * Calculate the maximum height for the skill boxes and
@@ -25,10 +25,10 @@ $(window).load(function() {
     skills.on("mouseenter", function() {
         skills.not($(this)).stop().animate({
             opacity: 0.4
-        }, 300);
+        }, 150);
     }).on("mouseleave", function() {
         skills.stop().animate({
             opacity: 1
-        }, 300);
+        }, 150);
     });
 });

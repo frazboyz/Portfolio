@@ -20,7 +20,7 @@
   <br class="spacer-sm"/>
   <div class="skills grid">
     <% @skills.each do |skill| %>
-        <div class="third">
+        <section class="third">
           <h2 style="color: <%= skill.color %>"><%= skill.name %></h2>
 
           <p><%= skill.summary %></p>
@@ -30,7 +30,7 @@
           <a class="button" href="<%= url_for :action => :show, :id => skill.id %>">More
             Info
           </a>
-        </div>
+        </section>
     <% end %>
   </div>
 </div>
