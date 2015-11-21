@@ -23,8 +23,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
-  database: portfolio_production
+  encoding: unicode
+  pool: 5
+  host: localhost
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  database: portfolio_production
