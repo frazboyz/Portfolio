@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120235343) do
+ActiveRecord::Schema.define(version: 20151208081128) do
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "summary"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "milestones", force: :cascade do |t|
+    t.string  "name"
+    t.string  "summary"
+    t.string  "content"
+    t.date    "date"
+    t.boolean "visible"
+    t.string  "image"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -28,6 +29,11 @@ ActiveRecord::Schema.define(version: 20151120235343) do
     t.string  "image"
     t.boolean "visible"
     t.string  "github_link"
+  end
+
+  create_table "projects_skills", force: :cascade do |t|
+    t.integer "skill_id"
+    t.integer "project_id"
   end
 
   create_table "skills", force: :cascade do |t|

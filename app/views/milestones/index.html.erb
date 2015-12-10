@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="center">Milestones</h1>
+  <% if logged_in %>
+      <a class="new-project button" href="<%= url_for :action => :new %>">
+        New Milestone
+      </a>
+  <% end %>
+  <br class="spacer-sm"/>
+
+  <p class="center">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Curabitur massa purus, congue condimentum risus in, rutrum
+    sodales est. Morbi non est varius metus dapibus ullamcorper.
+    Vestibulum massa orci, dictum sit amet nulla non,
+    fringilla rutrum nulla. Vestibulum gravida libero at mi auctor,
+    eu auctor sapien dictum.
+  </p>
+  <br class="spacer-sm"/>
+
+  <div class="milestones">
+    <% @milestones.each do |milestone| %>
+        <section class="milestone">
+          <div class="sidebar">
+            <div class="date">
+              <h2>
+                <%= milestone.date.year %>
+              </h2>
+              <h3>
+                <span><%= milestone.date.month %></span>
+                /
+                <span><%= milestone.date.day %></span>
+              </h3>
+            </div>
+          </div>
+          <div class="summary">
+            <h2><%= milestone.name %></h2>
+            <p><%= milestone.summary %></p>
+            <a class="button" href="<%= url_for :action => :show, :id => milestone.id %>">
+              More Info
+            </a>
+          </div>
+        </section>
+    <% end %>
+  </div>
+</div>

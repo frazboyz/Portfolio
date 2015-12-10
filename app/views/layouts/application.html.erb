@@ -23,7 +23,10 @@
         <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
       </li>
       <li>
-        <a class="<%= params[:controller] == 'blog' ? 'current' : '' %>" href="<%= url_for :controller => :blog %>">Blog</a>
+        <a class="<%= params[:controller] == 'milestones' ? 'current' : '' %>" href="<%= url_for :controller => :milestones %>">Milestones</a>
+      </li>
+      <li>
+        <a class="contact " href="#">Contact</a>
       </li>
     </ul>
   </div>
@@ -40,19 +43,16 @@
       <div class="half">
         <ul class="menu">
           <li>
-            <a href="#">Overview</a>
+            <a href="<%= url_for :controller => :application %>">Overview</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="<%= url_for :controller => :skills %>">Skills</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="<%= url_for :controller => :projects %>">Projects</a>
           </li>
           <li>
-            <a href="#">Hobbies</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
+            <a href="<%= url_for :controller => :milestones %>">Milestones</a>
           </li>
           <li>
             <% if logged_in %>

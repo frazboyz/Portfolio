@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
   end
 
   # Shows the contents of a project.
-  # GET http://francismb.com/projects/show?id=?
+  # GET http://francismb.com/projects/ID
   def show
     @project = logged_in ? Project.find(params[:id]) : Project.where(:id => params[:id]).where(:visible => true).first
   end
@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
   # Processes the form sent from the action #new and
   # creates a new project if the information is valid.
   # Requires authentication.
-  # POST http://francismb.com/projects/create
+  # POST http://francismb.com/projects
   def create
     @project = Project.new(project_params)
     if @project.validate && @project.save
@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
 
   # Shows the form to edit a persisted project
   # Requires authentication.
-  # GET http://francismb.com/projects/edit?id=?
+  # GET http://francismb.com/projects/ID/edit
   def edit
     @project = Project.find(params[:id])
   end
@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
   # Processes the form sent from the action #edit and
   # updates the project if the information is valid.
   # Requires authentication.
-  # PUT http://francismb.com/projects/update
+  # PUT http://francismb.com/projects/ID
   def update
     @project = Project.find(params[:id])
     if @project.update(project_params)
@@ -62,14 +62,14 @@ class ProjectsController < ApplicationController
 
   # Confirms if you want to delete a project.
   # Requires authentication.
-  # GET http://francismb.com/projects/delete?id=?
+  # GET http://francismb.com/projects/delete/ID
   def delete
     @project = Project.find(params[:id])
   end
 
   # Deletes a persisted project from the database.
   # Requires authentication.
-  # DELETE http://francismb.com/projects/id=?
+  # DELETE http://francismb.com/projects/ID
   def destroy
     project = Project.find(params[:id])
     if project

@@ -1,4 +1,4 @@
-class SkillsController < ApplicationController
+class MilestonesController < ApplicationController
 
   # Require authentication for the following functions
   before_action :require_authentication, :only => [
@@ -10,13 +10,13 @@ class SkillsController < ApplicationController
   # Lists all the skills.
   # GET http://francismb.com/skills
   def index
-    @skills = logged_in ? Skill.all : Skill.where(:visible => true)
+    @milestones = logged_in ? Milestone.all : Milestone.where(:visible => true)
   end
 
   # Shows the contents of a skill.
   # GET http://francismb.com/skills/ID
   def show
-    @skill = logged_in ? Skill.find(params[:id]) : Skill.where(:id => params[:id]).where(:visible => true).first
+    @milestone = logged_in ? Milestone.find(params[:id]) : Milestone.where(:id => params[:id]).where(:visible => true).first
   end
 
   # Shows the form to make a new skill.
@@ -30,11 +30,11 @@ class SkillsController < ApplicationController
   # Requires authentication.
   # POST http://francismb.com/skills
   def create
-    @skill = Skill.new(skill_params)
-    if @skill.validate && @skill.save
-      redirect_to :action => :show, :id => @skill.id
+    @milestone = Milestone.new(milestone_params)
+    if @milestone.validate && @milestone.save
+      redirect_to :action => :show, :id => @milestone.id
     else
-      @errors = @skill.errors
+      @errors = @milestone.errors
       render :action => :new
     end
   end
@@ -43,7 +43,7 @@ class SkillsController < ApplicationController
   # Requires authentication.
   # GET http://francismb.com/skills/ID/edit
   def edit
-    @skill = Skill.find(params[:id])
+    @milestone = Milestone.find(params[:id])
   end
 
   # Processes the form sent from the action #edit and
@@ -51,9 +51,9 @@ class SkillsController < ApplicationController
   # Requires authentication.
   # PUT http://francismb.com/skills/ID
   def update
-    @skill = Skill.find(params[:id])
-    if @skill.update(skill_params)
-      redirect_to :action => :show, :id => @skill.id
+    @milestone = Milestone.find(params[:id])
+    if @milestone.update(milestone_params)
+      redirect_to :action => :show, :id => @milestone.id
     else
       @errors = @skill.errors
       render :action => :edit
@@ -64,25 +64,23 @@ class SkillsController < ApplicationController
   # Requires authentication.
   # GET http://francismb.com/skills/delete/ID
   def delete
-    @skill = Skill.find(params[:id])
+    @milestone = Milestone.find(params[:id])
   end
 
   # Deletes a persisted skill from the database.
   # Requires authentication.
   # DELETE http://francismb.com/skills/ID
   def destroy
-    skill = Skill.find(params[:id])
-    if skill
-      skill.delete
+    milestone = Milestone.find(params[:id])
+    if milestone
+      milestone.delete
     end
     redirect_to :action => :index
   end
 
   private
 
-  # The parameters required for a new skill
-  def skill_params
-    params.require(:skill).permit(:name, :color, :summary, :content, :knowledge, :visible)
+  def milestone_params
+    params.require(:milestone).permit(:name, :summary, :content, :image, :date, :visible)
   end
-
 end

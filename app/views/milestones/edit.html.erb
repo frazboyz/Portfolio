@@ -1,0 +1,26 @@
+<div class='container'>
+  <h1>Edit <%= @milestone.name %> Milestone</h1>
+  <br class='spacer-sm'/>
+  <% if @errors %>
+      <p class="errors">
+        <% @errors.full_messages.each do |error| %>
+            <%= error %><br/>
+        <% end %>
+      </p>
+  <% end %>
+  <%= form_for :milestone, :url => {:action => :update}, :html => {class: 'medium', :method => 'put'} do |milestone_form| %>
+      <%= milestone_form.label(:name, 'Name') %>
+      <%= milestone_form.text_field(:name) %>
+      <%= milestone_form.label(:summary, 'Summary') %>
+      <%= milestone_form.text_area(:summary) %>
+      <%= milestone_form.label(:content, 'Content') %>
+      <%= milestone_form.text_area(:content) %>
+      <%= milestone_form.label(:date, 'Date') %>
+      <%= milestone_form.date_select(:date) %>
+      <%= milestone_form.label(:image, 'Image') %>
+      <%= milestone_form.file_field :image %>
+      <%= milestone_form.check_box(:visible) %>
+      <%= milestone_form.label(:visible, 'Publicly visible') %>
+      <%= milestone_form.submit('Update Milestone', :class => 'button') %>
+  <% end %>
+</div>

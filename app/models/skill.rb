@@ -6,4 +6,6 @@ class Skill < ActiveRecord::Base
   validates :content, :presence => {:message => 'The content field cannot be blank'}
   validates :knowledge, :presence => {:message => 'The knowledge field cannot be blank'}
 
+  has_and_belongs_to_many :projectsss
+
 end

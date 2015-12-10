@@ -8,7 +8,7 @@
         <% end %>
       </p>
   <% end %>
-  <%= form_for :project, :method => 'put', :url => {:action => :update}, :html => {class: 'medium'} do |project_form| %>
+  <%= form_for :project, :url => {:action => :update}, :html => {class: 'medium', :method => 'put'} do |project_form| %>
       <%= project_form.label(:name, 'Name') %>
       <%= project_form.text_field(:name) %>
       <%= project_form.label(:name, 'Github Link') %>
@@ -20,7 +20,7 @@
       <%= project_form.label(:image, 'Image') %>
       <%= project_form.file_field :image %>
       <%= project_form.check_box(:visible) %>
-      <%= project_form.label(:visible, "Publically visible") %>
+      <%= project_form.label(:visible, 'Publicly visible') %>
       <%= project_form.submit('Update Project', :class => 'button') %>
   <% end %>
 </div>

@@ -10,7 +10,8 @@
       </a>
   <% end %>
   <br class="spacer-sm"/>
-  <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <p class="center">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Curabitur massa purus, congue condimentum risus in, rutrum
     sodales est. Morbi non est varius metus dapibus ullamcorper.
     Vestibulum massa orci, dictum sit amet nulla non,
@@ -21,6 +22,7 @@
   <div class="projects">
     <% @projects.each do |project| %>
       <section class="project">
+        <!-- Modulus 2 to determine whether a project is even/odd -->
         <% if @projects.index(project) % 2 === 0 %>
             <div class="image">
               <img src="<%= project.image %>"/>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Delete <%= @milestone.name %> Project</h1>
+  <br class="spacer-sm"/>
+  <%= form_for :milestone, :url => {:action => :destroy, :id => @milestone.id}, :method => 'DELETE' do |project_form| %>
+      <p>Are you sure you want to delete this milestone?</p>
+      <%= project_form.submit('Delete Milestone', :class => 'button') %>
+  <% end %>
+</div>

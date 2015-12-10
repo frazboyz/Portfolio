@@ -1,0 +1,15 @@
+<article class="container">
+  <h1><%= @milestone.name %></h1>
+  <% if logged_in %>
+      <a class="edit-project button" href="<%= url_for :action => :edit, :id => @milestone.id %>">
+        Edit Project
+      </a>
+      <a class="delete-project button" href="<%= url_for :action => :delete, :id => @milestone.id %>">
+        Delete Project
+      </a>
+  <% end %>
+  <br class="spacer-sm"/>
+
+  <p><%= raw(@milestone.content) %></p>
+  <img src="<%= @milestone.image %>"/>
+</article>
