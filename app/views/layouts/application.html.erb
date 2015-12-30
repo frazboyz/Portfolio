@@ -14,7 +14,7 @@
 
     <ul class="menu">
       <li>
-        <a class="<%= params[:controller] == 'application' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
+        <a class="<%= params[:controller] == 'application' && params[:action] == 'index' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
       </li>
       <li>
         <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
@@ -26,7 +26,7 @@
         <a class="<%= params[:controller] == 'milestones' ? 'current' : '' %>" href="<%= url_for :controller => :milestones %>">Milestones</a>
       </li>
       <li>
-        <a class="contact " href="#">Contact</a>
+        <a class="<%= params[:controller] == 'application' && params[:action] == 'contact' ? 'current' : '' %>" href="<%= url_for :controller => :application, :action => :contact %>">Contact</a>
       </li>
     </ul>
   </div>
