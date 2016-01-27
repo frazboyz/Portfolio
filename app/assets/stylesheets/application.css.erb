@@ -11,13 +11,39 @@ p.padded {
   padding: 0 100px;
 }
 .young-background {
-  margin: 40px 0;
-  padding: 40px;
+  margin: 25px 0;
   background: url(<%= image_url('background.jpg') %>) center top no-repeat;
+  -webkit-background-size: ;
   background-size: cover;
-  height: 400px;
+  height: 280px;
 }
-.young-background h1 {
+.young-background p {
+  display: table-cell;
+  vertical-align: middle;
+  height: 280px;
   color: #ffffff;
+  line-height: 24px;
+}
+.specialties {
   text-align: center;
+}
+.specialties .quarter {
+  padding: 0 15px;
+}
+.specialties h3 {
+  margin: 5px auto;
+  font-weight:500;
+}
+.specialties p {
+  color: #949494;
+}
+.specialties .circle {
+  display: inline-block;
+  padding: 20px;
+  width: 32px;
+  height: 32px;
+  background: #333333;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
 }

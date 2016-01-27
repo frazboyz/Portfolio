@@ -1,0 +1,14 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'messages' %>
+<% end %>
+<div class="container">
+  <h1><%= @message.name %>'s Message</h1>
+  <br class="spacer-sm"/>
+  <a class="delete-message button" href="<%= url_for :action => :delete, :id => @message.id %>">
+    Delete Message
+  </a>
+  <div class="message-content">
+    <%= @message.message %>
+  </div>
+</div>

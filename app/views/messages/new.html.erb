@@ -1,0 +1,35 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'messages' %>
+<% end %>
+<div class="container">
+  <h1 class="center">Get in touch!</h1>
+  <br class="spacer-sm"/>
+  <p class="center">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Curabitur massa purus, congue condimentum risus in, rutrum
+    sodales est. Morbi non est varius metus dapibus ullamcorper.
+    Vestibulum massa orci, dictum sit amet nulla non,
+    fringilla rutrum nulla. Vestibulum gravida libero at mi auctor,
+    eu auctor sapien dictum.
+  </p>
+  <br class="spacer-sm"/>
+  <%= form_for :message, :url => {:action => :create}, :html => {:class => 'contact grid'} do |contact_form| %>
+      <div class="half">
+        <%= contact_form.label(:name, 'Your name') %>
+        <%= contact_form.text_field(:name) %>
+        <%= contact_form.label(:email, 'Your email') %>
+        <%= contact_form.text_field(:email) %>
+      </div>
+      <div class="half">
+        <%= contact_form.label(:message, 'Message') %>
+        <%= contact_form.text_area(:message) %>
+      </div>
+      <div class="full center after-errors">
+        <button class="submit button">
+          <span>Send your message</span>
+          <img src="<%= image_url('loading.png') %>"/>
+        </button>
+      </div>
+  <% end %>
+</div>

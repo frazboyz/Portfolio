@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :skills
   resources :projects
   resources :milestones
+  resources :messages
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.

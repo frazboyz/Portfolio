@@ -14,8 +14,4 @@ class ApplicationController < ActionController::Base
   def index
   end
 
-  # GET http://francismb.com/contact
-  def contact
-  end
-
 end

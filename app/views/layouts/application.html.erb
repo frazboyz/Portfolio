@@ -26,7 +26,7 @@
         <a class="<%= params[:controller] == 'milestones' ? 'current' : '' %>" href="<%= url_for :controller => :milestones %>">Milestones</a>
       </li>
       <li>
-        <a class="<%= params[:controller] == 'application' && params[:action] == 'contact' ? 'current' : '' %>" href="<%= url_for :controller => :application, :action => :contact %>">Contact</a>
+        <a class="<%= params[:controller] == 'messages' ? 'current' : '' %>" href="<%= url_for :controller => :messages, :action => :new %>">Contact</a>
       </li>
     </ul>
   </div>
@@ -56,6 +56,7 @@
           </li>
           <li>
             <% if logged_in %>
+                <a href="<%= url_for :controller => :messages %>">Messages</a>
                 <a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
             <% else %>
                 <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>

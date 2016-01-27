@@ -1,0 +1,12 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'messages' %>
+<% end %>
+<div class="container">
+  <h1>Delete <%= @message.name %>'s Message</h1>
+  <br class="spacer-sm"/>
+  <%= form_for :message, :url => {:action => :destroy, :id => @message.id}, :method => 'DELETE' do |message_form| %>
+      <p>Are you sure you want to delete this message?</p>
+      <%= message_form.submit('Delete Message', :class => 'button') %>
+  <% end %>
+</div>

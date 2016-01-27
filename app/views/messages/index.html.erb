@@ -1,0 +1,24 @@
+<% content_for :headers do %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'messages' %>
+<% end %>
+<div class="container">
+  <h1>Messages</h1>
+  <br class="spacer-sm"/>
+  <div class="messages">
+    <% @messages.each do |message| %>
+      <div class="grid">
+        <div class="quarter">
+          <%= message.name %>
+        </div>
+        <div class="quarter">
+          <%= message.email %>
+        </div>
+        <div class="half">
+          <a href="<%= url_for :action => :show, :id => message.id %>" class="button">View</a>
+          <a href="<%= url_for :action => :delete, :id => message.id %>" class="button">Delete</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

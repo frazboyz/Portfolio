@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208081128) do
+ActiveRecord::Schema.define(version: 20160125051424) do
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "milestones", force: :cascade do |t|
     t.string  "name"

@@ -4,18 +4,21 @@
   content: " ";
   clear: both;
 }
-.grid > .half, .grid > .third, .grid > .quarter {
+.grid .full, .grid .half, .grid .third, .grid .quarter {
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.grid > .half {
+.grid .full {
+  width: 100%;
+}
+.grid .half {
   width: 50%;
 }
-.grid > .third {
+.grid .third {
   width: 33.3%;
 }
-.grid > .quarter {
+.grid .quarter {
   width: 25%;
 }
