@@ -18,17 +18,4 @@ $(window).load(function() {
         max_height = Math.max(max_height, $(this).height());
     });
     skills.height(max_height);
-
-    /**
-     * Provides the opacity animations when you hover over skills.
-     */
-    skills.on("mouseenter", function() {
-        skills.not($(this)).stop().animate({
-            opacity: 0.4
-        }, 150);
-    }).on("mouseleave", function() {
-        skills.stop().animate({
-            opacity: 1
-        }, 150);
-    });
 });
