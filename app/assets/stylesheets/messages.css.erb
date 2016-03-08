@@ -26,17 +26,13 @@ form input[type=text], form textarea {
   line-height: 35px;
   outline: none;
   border: 1px solid #d1d1d1;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 form textarea {
-  padding: 0 5px;
-  height: 104px;
+    padding: 5px;
+    line-height: 1.2em;
+    height: 104px;
 }
 
 form input[type=text]:focus, form textarea:focus {
@@ -78,14 +74,7 @@ form button.submit-loading img {
   display: block;
   margin: 0 auto;
   -webkit-animation:spin 1s linear infinite;
-  -moz-animation:spin 1s linear infinite;
   animation:spin 1s linear infinite;
-}
-
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
 }
 @-webkit-keyframes spin {
   100% {
