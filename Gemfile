@@ -12,6 +12,7 @@ end
 
 # Production gems
 group :production do
-  gem 'unicorn' # Unicorn app server
+  gem 'puma' # Use puma as the app server
+  gem 'viaduct_rails_helpers' # Use viaduct helpers for admin statistics
   gem 'pg' # Postgresql as the production database
 end
