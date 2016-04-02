@@ -10,7 +10,7 @@
 <body>
 <header>
   <div class="container">
-    <a class="me" href="<%= url_for :controller => :application %>">Francis Malloch-Boe<span>Software Engineer, Web Developer</span></a>
+    <a class="me" href="<%= url_for :controller => :application %>">Francis Malloch-Boe<span>Software Engineer &amp; Web Developer</span></a>
     <ul class="menu">
       <li>
         <a class="<%= params[:controller] == 'application' && params[:action] == 'index' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
