@@ -1,5 +1,10 @@
 <article class="container">
-  <h1><%= @project.name %></h1>
+  <h1 class="title">
+      <span><%= @project.name %></span>
+      <% if @project.github_link.length() > 0 %>
+        <a class="github-link" target="_blank" href="<%= @project.github_link %>">Github Project Link</a>
+      <% end %>
+  </h1>
   <% if logged_in %>
       <a class="edit-project button" href="<%= url_for :action => :edit, :id => @project.id %>">
         Edit Project
@@ -9,7 +14,6 @@
       </a>
   <% end %>
   <br class="spacer-sm"/>
-
   <p><%= raw(@project.content) %></p>
   <img src="<%= @project.image %>"/>
 </article>

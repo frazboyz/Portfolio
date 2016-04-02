@@ -8,16 +8,27 @@ a.edit-project {
   right: 144px;
 }
 
+/* Github link */
+h1.title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+h1.title a.github-link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    text-indent: -9999px;
+    background: url(<%= image_url('github.png') %>) center no-repeat;
+}
+
 /* Project view styles */
 .projects > .project {
   overflow: hidden;
   height: 300px;
   margin-bottom: 20px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
 .projects > .project > .image {
@@ -32,8 +43,6 @@ a.edit-project {
   width: 33.3%;
   padding: 20px;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .projects > .project > .summary > .position {
