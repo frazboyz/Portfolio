@@ -1,7 +1,7 @@
 class MilestonesController < ApplicationController
 
   # Require authentication for the following functions
-  before_action :require_authentication, :only => [
+  before_action :require_admin_authentication, :only => [
       :new, :create,
       :edit, :update,
       :delete, :destroy
