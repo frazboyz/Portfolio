@@ -4,7 +4,7 @@
 <% end %>
 <div class="container">
   <h1 class="center">Skills</h1>
-  <% if logged_in %>
+  <% if admin_logged_in %>
       <a class="new-skill button" href="<%= url_for :action => :new %>">
         New Skill
       </a>

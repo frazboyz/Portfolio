@@ -5,7 +5,7 @@
         <a class="github-link" target="_blank" href="<%= @project.github_link %>">Github Project Link</a>
       <% end %>
   </h1>
-  <% if logged_in %>
+  <% if admin_logged_in %>
       <a class="edit-project button" href="<%= url_for :action => :edit, :id => @project.id %>">
         Edit Project
       </a>

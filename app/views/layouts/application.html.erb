@@ -54,9 +54,12 @@
             <a href="<%= url_for :controller => :milestones %>">Milestones</a>
           </li>
           <li>
+           <% if admin_logged_in %>
+              <a href="<%= url_for :controller => :messages %>">Messages</a>
+            <% end %>
             <% if logged_in %>
-                <a href="<%= url_for :controller => :messages %>">Messages</a>
-                <a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
+              <a href="<%= url_for :controller => :server, :action => :index %>">Server</a>
+              <a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
             <% else %>
                 <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
             <% end %>

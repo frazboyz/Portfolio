@@ -1,0 +1,16 @@
+<div class='container'>
+  <h1>New Server</h1>
+  <br class='spacer-sm'/>
+  <% if @errors %>
+      <p class="errors">
+        <% @errors.full_messages.each do |error| %>
+            <%= error %><br/>
+        <% end %>
+      </p>
+  <% end %>
+  <%= form_for :server, :url => {:action => :create}, :html => {:class => 'medium'} do |server_form| %>
+    <%= server_form.label(:content, 'Content') %>
+    <%= server_form.text_area(:content) %>
+    <%= server_form.submit('Create Server', :class => 'button') %>
+  <% end %>
+</div>
