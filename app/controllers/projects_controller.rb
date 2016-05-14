@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
   # POST http://francismb.com/projects
   def create
     @project = Project.new(project_params)
-    if @project.validate && @project.save
+    if @project.valid? && @project.save
       redirect_to :action => :show, :id => @project.id
     else
       @errors = @project.errors

@@ -31,7 +31,7 @@ class SkillsController < ApplicationController
   # POST http://francismb.com/skills
   def create
     @skill = Skill.new(skill_params)
-    if @skill.validate && @skill.save
+    if @skill.valid? && @skill.save
       redirect_to :action => :show, :id => @skill.id
     else
       @errors = @skill.errors

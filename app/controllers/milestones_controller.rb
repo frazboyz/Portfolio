@@ -31,7 +31,7 @@ class MilestonesController < ApplicationController
   # POST http://francismb.com/skills
   def create
     @milestone = Milestone.new(milestone_params)
-    if @milestone.validate && @milestone.save
+    if @milestone.valid? && @milestone.save
       redirect_to :action => :show, :id => @milestone.id
     else
       @errors = @milestone.errors
