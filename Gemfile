@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1' # Specify the ruby on rails version
 gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'fog', '1.36' # Allow carrier wave to use fog
-gem 'carrierwave', '0.11.2' # Use carrier wave for image storage/uploads
+gem 'carrierwave', '0.11.2 ' # Use carrier wave for image storage/uploads
 gem 'bcrypt' # Use bcypt to preform cryptography on user passwords
 
 # Development gems
