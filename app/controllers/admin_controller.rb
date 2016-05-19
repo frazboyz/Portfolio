@@ -22,7 +22,7 @@ class AdminController < ApplicationController
   # else it renders the login again.
   # POST http://francismb.com/admin/authenticate
   def authenticate
-    user = User.find_by_username(params[:username]);
+    user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       flash[:error] = nil
       session[:user_id] = user.id

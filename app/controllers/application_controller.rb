@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # Standard application layout
-  layout "application"
+  layout 'application'
 
   # A few helper methods to assist controllers and templates.
   include ApplicationHelper

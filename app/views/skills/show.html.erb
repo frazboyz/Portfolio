@@ -1,6 +1,6 @@
 <article class="container">
   <h1><%= @skill.name %></h1>
-  <% if admin_logged_in %>
+  <% if logged_in %>
       <a class="edit-skill button" href="<%= url_for :action => :edit, :id => @skill.id %>">
         Edit Skill
       </a>

@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 
   # Require authentication for the following functions
-  before_action :require_admin_authentication, :only => [
+  before_action :logged_in, :only => [
       :index,
       :delete, :destroy
   ]

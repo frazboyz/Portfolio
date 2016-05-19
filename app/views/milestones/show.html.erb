@@ -1,6 +1,6 @@
 <article class="container">
   <h1><%= @milestone.name %></h1>
-  <% if admin_logged_in %>
+  <% if logged_in %>
       <a class="edit-project button" href="<%= url_for :action => :edit, :id => @milestone.id %>">
         Edit Project
       </a>

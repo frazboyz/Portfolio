@@ -3,7 +3,7 @@
 <% end %>
 <div class="container">
   <h1 class="center">Projects</h1>
-  <% if admin_logged_in %>
+  <% if logged_in %>
       <a class="new-project button" href="<%= url_for :action => :new %>">
         New Project
       </a>
