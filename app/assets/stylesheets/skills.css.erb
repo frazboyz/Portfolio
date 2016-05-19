@@ -1,32 +1,49 @@
 /* Edit/Delete/New button styles */
 a.new-skill, a.edit-skill, a.delete-skill {
-    position: absolute;
-    right: 0;
-    top: 3px;
+	position: absolute;
+	right: 0;
+	top: 3px;
 }
+
 a.edit-skill {
-    right: 120px;
+	right: 120px;
 }
 
 /* Skill index styles */
 .skills > .third {
-    text-align: center;
-    margin: 10px;
-    padding: 20px;
-    width: 30%;
-    width: calc(33.3% - 20px);
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+	position: relative;
+	text-align: center;
+	margin: 10px;
+	padding: 20px 20px 70px 20px;
+	width: 30%;
+	width: calc(33.3% - 20px);
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
+
 .skills > .third:nth-child(3n+1) {
-    margin-left: 0;
-    margin-right: 20px;
+	margin-left: 0;
+	margin-right: 20px;
 }
+
 .skills > .third:nth-child(3n) {
-    margin-right: 0;
-    margin-left: 20px;
+	margin-right: 0;
+	margin-left: 20px;
+}
+
+.skills > .third a {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 70px;
+}
+.skills > .third p
+{
+	margin-bottom: 0;
 }

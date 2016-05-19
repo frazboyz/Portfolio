@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519070409) do
+ActiveRecord::Schema.define(version: 20160519073514) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20160519070409) do
     t.text    "summary"
     t.text    "content"
     t.string  "color"
-    t.integer "knowledge"
     t.boolean "visible"
   end
 

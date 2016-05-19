@@ -20,11 +20,7 @@
     <% @skills.each do |skill| %>
         <section class="third">
           <h2 style="color: <%= skill.color %>"><%= skill.name %></h2>
-
           <p><%= skill.summary %></p>
-
-          <h2><%= skill.knowledge %>/100</h2>
-          <br class="spacer-sm"/>
           <a class="button" href="<%= url_for :action => :show, :id => skill.id %>">More
             Info
           </a>
