@@ -1,95 +1,108 @@
 a.delete-message {
-  position: absolute;
-  top: 3px;
-  right: 0;
+	position: absolute;
+	top: 3px;
+	right: 0;
 }
+
 .messages > div {
-  height: 38px;
-  padding: 7px 0;
-  border-bottom: 1px solid #cccccc;
+	height: 38px;
+	padding: 7px 0;
+	border-bottom: 1px solid #cccccc;
 }
+
 .messages > div:first-child {
-  border-top: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
 }
+
 .messages .quarter {
-  line-height: 38px;
+	line-height: 38px;
 }
+
 .messages .half {
-  text-align: right;
+	text-align: right;
 }
 
 form input[type=text], form textarea {
-  display: block;
-  width: 100%;
-  height: 35px;
-  padding: 5px;
-  line-height: 35px;
-  outline: none;
-  border: 1px solid #d1d1d1;
-  border-radius: 3px;
-  box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 35px;
+	padding: 5px;
+	line-height: 35px;
+	outline: none;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	box-sizing: border-box;
 }
+
 form textarea {
-    padding: 5px;
-    line-height: 1.2em;
-    height: 104px;
+	padding: 5px;
+	line-height: 1.2em;
+	height: 104px;
 }
 
 form input[type=text]:focus, form textarea:focus {
-  border-color: #acacac;
+	border-color: #acacac;
 }
 
 form input[type=submit] {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 form fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 form fieldset:nth-of-type(2n-1) {
-  padding-right: 15px;
+	padding-right: 15px;
 }
 
 form fieldset:nth-of-type(2n) {
-  padding-left: 15px;
+	padding-left: 15px;
 }
 
 form .errors, h2 {
-  padding: 10px;
-  background: #ECEFF1;
+	padding: 10px;
+	background: #ECEFF1;
 }
+
 form .errors p {
-  margin: 0;
+	margin: 0;
 }
+
 form button {
-  margin-top: 10px;
+	margin-top: 10px;
 }
+
 form button.submit img {
-  display: none;
+	display: none;
 }
+
 form button.submit span {
-  display: block;
+	display: block;
 }
+
 form button.submit-loading span {
-  display: none;
+	display: none;
 }
+
 form button.submit-loading img {
-  display: block;
-  margin: 0 auto;
-  -webkit-animation:spin 1s linear infinite;
-  animation:spin 1s linear infinite;
+	display: block;
+	margin: 0 auto;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
 }
+
 @-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
 }
+
 @keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }

@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FMB Portfolio</title>
-  <%= stylesheet_link_tag 'layouts/generic_layout' %>
-  <%= stylesheet_link_tag params[:controller] %>
-  <%= yield :headers %>
-  <%= csrf_meta_tags %>
+	<title>FMB Portfolio</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+	<%= stylesheet_link_tag 'layouts/generic_layout' %>
+	<%= stylesheet_link_tag params[:controller] %>
+	<%= yield :headers %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 <header>
-  <div class="container">
-    <a class="me" href="<%= url_for :controller => :application %>">Francis Malloch-Boe<span>Software Engineer &amp; Web Developer</span></a>
-    <ul class="menu">
-      <li>
-        <a class="<%= params[:controller] == 'application' && params[:action] == 'index' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
-      </li>
-      <li>
-        <a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
-      </li>
-      <li>
-        <a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
-      </li>
-      <li>
-        <a class="<%= params[:controller] == 'milestones' ? 'current' : '' %>" href="<%= url_for :controller => :milestones %>">Milestones</a>
-      </li>
-      <li>
-        <a class="<%= params[:controller] == 'messages' ? 'current' : '' %>" href="<%= url_for :controller => :messages, :action => :new %>">Contact</a>
-      </li>
-    </ul>
-  </div>
+	<nav class="container">
+		<a class="me" href="<%= url_for :controller => :application %>">Francis Malloch-Boe<span>Software Engineer &amp; Web Developer</span></a>
+		<ul class="menu">
+			<li>
+				<a class="<%= params[:controller] == 'application' && params[:action] == 'index' ? 'current' : '' %>" href="<%= url_for :controller => :application %>">Overview</a>
+			</li>
+			<li>
+				<a class="<%= params[:controller] == 'skills' ? 'current' : '' %>" href="<%= url_for :controller => :skills %>">Skills</a>
+			</li>
+			<li>
+				<a class="<%= params[:controller] == 'projects' ? 'current' : '' %>" href="<%= url_for :controller => :projects %>">Projects</a>
+			</li>
+			<li>
+				<a class="<%= params[:controller] == 'milestones' ? 'current' : '' %>" href="<%= url_for :controller => :milestones %>">Milestones</a>
+			</li>
+			<li>
+				<a class="<%= params[:controller] == 'messages' ? 'current' : '' %>" href="<%= url_for :controller => :messages, :action => :new %>">Contact</a>
+			</li>
+		</ul>
+	</nav>
 </header>
-<div class="content">
-  <%= yield %>
-</div>
+<main class="content">
+	<%= yield %>
+</main>
 <footer>
-  <div class="container">
-    <div class="grid">
-      <div class="quarter">
-        <a href="#">Francis Malloch-Boe</a>
-      </div>
-      <div class="half">
-        <ul class="menu">
-          <li>
-            <a href="<%= url_for :controller => :application %>">Overview</a>
-          </li>
-          <li>
-            <a href="<%= url_for :controller => :skills %>">Skills</a>
-          </li>
-          <li>
-            <a href="<%= url_for :controller => :projects %>">Projects</a>
-          </li>
-          <li>
-            <a href="<%= url_for :controller => :milestones %>">Milestones</a>
-          </li>
-          <li>
-            <% if logged_in %>
-                <a href="<%= url_for :controller => :messages %>">Messages</a>
-                <a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
-            <% else %>
-                <a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-      <div class="quarter">
-        <a href="https://github.com/frazboyz" target="_blank">Github</a>
-        <a href="mailto:francis.mallochboe@gmail.com" target="_blank">Email</a>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="grid">
+			<div class="quarter">
+				<a href="#">Francis Malloch-Boe</a>
+			</div>
+			<nav class="half">
+				<ul class="menu">
+					<li>
+						<a href="<%= url_for :controller => :application %>">Overview</a>
+					</li>
+					<li>
+						<a href="<%= url_for :controller => :skills %>">Skills</a>
+					</li>
+					<li>
+						<a href="<%= url_for :controller => :projects %>">Projects</a>
+					</li>
+					<li>
+						<a href="<%= url_for :controller => :milestones %>">Milestones</a>
+					</li>
+					<li>
+						<% if logged_in %>
+							<a href="<%= url_for :controller => :messages %>">Messages</a>
+							<a href="<%= url_for :controller => :admin, :action => :logout %>">Logout</a>
+						<% else %>
+							<a href="<%= url_for :controller => :admin, :action => :login %>">Admin</a>
+						<% end %>
+					</li>
+				</ul>
+			</nav>
+			<div class="quarter">
+				<a href="https://github.com/frazboyz" target="_blank">Github</a>
+				<a href="mailto:francis.mallochboe@gmail.com" target="_blank">Email</a>
+			</div>
+		</div>
+	</div>
 </footer>
 </body>
 </html>
