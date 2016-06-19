@@ -1,5 +1,6 @@
 CarrierWave.configure do |config|
-  config.fog_credentials = {
+    puts "APIKEY == #{ENV['RACKSPACE_API_KEY']}"
+	config.fog_credentials = {
       provider: 'Rackspace',
       rackspace_username: 'frazboyz',
       rackspace_api_key: ENV['RACKSPACE_API_KEY'],
